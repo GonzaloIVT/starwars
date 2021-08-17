@@ -12,9 +12,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+
+			personas: []
 		},
 		actions: {
+			getpersonas: () => {
+				const store = getStore();
+				fetch("https://www.swapi.tech/api/people")
+					.then(response => response.json())
+					.then(result => setStore({ personas: [result.results] }))
+					.catch(error => console.log("error", error));
+
+				console.log(store.personas);
+			},
+
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
