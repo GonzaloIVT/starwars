@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import "../../styles/home.scss";
 
 import { Context } from "../store/appContext";
 
@@ -9,12 +10,16 @@ export const Home = () => {
 	return (
 		<div className="text-center mt-5">
 			<h1>Hello Rigo!</h1>
+
 			<ul>
 				{store.people.map((persona, posicion) => {
 					return (
 						<li key={posicion}>
 							{" "}
-							Usuario ID {persona.uid} de nombre {persona.name}
+							Usuario ID {persona.uid} de nombre {persona.name}{" "}
+							<Link to={"/persona/" + persona.uid}>
+								<button className="btn btn-info"> Ir a perfil</button>
+							</Link>
 						</li>
 					);
 				})}
@@ -22,9 +27,6 @@ export const Home = () => {
 			<a href="#" className="btn btn-success">
 				If you see this green button, bootstrap is working
 			</a>
-			<Link to="/persona">
-				<button>VISTA PERSONA</button>
-			</Link>
 		</div>
 	);
 };
