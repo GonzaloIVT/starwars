@@ -9,21 +9,48 @@ export const Home = () => {
 
 	return (
 		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
+			<h1>Personajes</h1>
+			<div className="container horizontal-scrollable">
+				<div className="row flex-nowrap">
+					<ul className="list-group list-group-horizontal">
+						{store.people.map((persona, posicion) => {
+							return (
+								<li className="list-group-item" key={posicion}>
+									{" "}
+									Usuario ID {persona.uid} de nombre {persona.name}{" "}
+									<Link to={"/persona/" + persona.uid}>
+										<button className="btn btn-info"> Ir a perfil</button>
+									</Link>
+								</li>
+							);
+						})}
+					</ul>
+				</div>
+			</div>
 
-			<ul>
-				{store.people.map((persona, posicion) => {
-					return (
-						<li key={posicion}>
-							{" "}
-							Usuario ID {persona.uid} de nombre {persona.name}{" "}
-							<Link to={"/persona/" + persona.uid}>
-								<button className="btn btn-info"> Ir a perfil</button>
-							</Link>
-						</li>
-					);
-				})}
-			</ul>
+			<div>
+				<h1>Vehiculos</h1>
+				<div className="container horizontal-scrollable">
+					<div
+						className="row flex-nowrap
+				">
+						<ul className="list-group list-group-horizontal">
+							{store.vehicles.map((vehiculo, posicion) => {
+								return (
+									<li className="list-group-item" key={posicion}>
+										{" "}
+										Usuario ID {vehiculo.uid} de nombre {vehiculo.name}{" "}
+										<Link to={"/vehicles/" + vehiculo.uid}>
+											<button className="btn btn-info"> Ir a perfil</button>
+										</Link>
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+				</div>
+			</div>
+
 			<a href="#" className="btn btn-success">
 				If you see this green button, bootstrap is working
 			</a>

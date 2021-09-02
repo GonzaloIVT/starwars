@@ -23,6 +23,7 @@ const injectContext = PassedComponent => {
 
 		useEffect(() => {
 			state.actions.loadSomeData();
+			state.actions.loadVehicles();
 
 			/**
 			 * EDIT THIS!
