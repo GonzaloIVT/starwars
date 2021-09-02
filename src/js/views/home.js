@@ -51,6 +51,29 @@ export const Home = () => {
 				</div>
 			</div>
 
+			<h1>Planetas</h1>
+			<div className="planeta mx-6 justify-content-center">
+				<div className="container">
+					<div
+						className="row flex-nowrap
+				">
+						<ul className="list-group list-group-horizontal">
+							{store.planets.map((planeta, posicion) => {
+								return (
+									<li className="list-group-item" key={posicion}>
+										{" "}
+										Usuario ID {planeta.uid} de nombre {planeta.name}{" "}
+										<Link to={"/planeta/" + planeta.uid}>
+											<button className="btn btn-info"> Ir a perfil</button>
+										</Link>
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+				</div>
+			</div>
+
 			<a href="#" className="btn btn-success">
 				If you see this green button, bootstrap is working
 			</a>

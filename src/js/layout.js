@@ -6,6 +6,7 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Persona } from "./views/persona";
 import { Vehicles } from "./views/vehicles";
+import { Planeta } from "./views/planeta";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -27,13 +28,14 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/persona">
-							<Persona />
-						</Route>
+
 						<Route exact path="/persona/:idpersona">
 							<Persona />
 						</Route>
-						<Route exact path="/vehicles/:idvehicles">
+						<Route exact path="/planeta/:idplaneta">
+							<Planeta />
+						</Route>
+						<Route exact path="/vehicles/:idvehiculo">
 							<Vehicles />
 						</Route>
 						<Route>
@@ -54,4 +56,9 @@ export default injectContext(Layout);
 						</Route>*/
 
 /*<Route exact path="/persona/:idpersona">
-							<Persona />*/
+							<Persona />
+							
+								<Route exact path="/persona">
+							<Persona />
+							
+							*/
