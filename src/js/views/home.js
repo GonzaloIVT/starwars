@@ -28,29 +28,6 @@ export const Home = () => {
 				</div>
 			</div>
 
-			<div>
-				<h1>Vehiculos</h1>
-				<div className="container horizontal-scrollable">
-					<div
-						className="row flex-nowrap
-				">
-						<ul className="list-group list-group-horizontal">
-							{store.vehicles.map((vehiculo, posicion) => {
-								return (
-									<li className="list-group-item" key={posicion}>
-										{" "}
-										Usuario ID {vehiculo.uid} de nombre {vehiculo.name}{" "}
-										<Link to={"/vehicles/" + vehiculo.uid}>
-											<button className="btn btn-info"> Ir a perfil</button>
-										</Link>
-									</li>
-								);
-							})}
-						</ul>
-					</div>
-				</div>
-			</div>
-
 			<h1>Planetas</h1>
 			<div className="planeta mx-6 justify-content-center">
 				<div className="container">
@@ -64,6 +41,29 @@ export const Home = () => {
 										{" "}
 										Usuario ID {planeta.uid} de nombre {planeta.name}{" "}
 										<Link to={"/planeta/" + planeta.uid}>
+											<button className="btn btn-info"> Ir a perfil</button>
+										</Link>
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<h1>Vehiculos</h1>
+				<div className="container horizontal-scrollable">
+					<div
+						className="row flex-nowrap
+				">
+						<ul className="list-group list-group-horizontal">
+							{store.vehicles.map((vehiculo, posicion) => {
+								return (
+									<li className="list-group-item" key={posicion}>
+										{" "}
+										Usuario ID {vehiculo.uid} de nombre {vehiculo.name}{" "}
+										<Link to={"/vehiculo/" + posicion}>
 											<button className="btn btn-info"> Ir a perfil</button>
 										</Link>
 									</li>

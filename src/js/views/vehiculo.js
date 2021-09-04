@@ -10,7 +10,7 @@ export const Vehiculo = () => {
 		<>
 			<h1>
 				Estamos en detalle de
-				{store.vehicles[params.idvehiculo - 1].name}
+				{store.vehicles[params.idvehiculo].name}
 			</h1>
 
 			<Link to="/">

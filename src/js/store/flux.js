@@ -16,7 +16,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			people: [],
 			vehicles: [],
-			planets: []
+			planets: [],
+			detailpeople: [],
+			detailplanets: [],
+			detailvehicles: []
 		},
 
 		actions: {
@@ -25,10 +28,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 
+			//FUNCION LAMAR PEOPLE (Se almacena people")
 			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-                */
 				const store = getStore();
 				fetch("https://www.swapi.tech/api/people")
 					.then(response => response.json())
@@ -39,10 +40,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log("error", error));
 			},
 
+			//FUNCION LLAMAR DETALLE PEOPLE (Se almacena en "detailpeople")
+			loadDetailPeople: uid => {
+				const store = getStore();
+				fetch("https://www.swapi.tech/api/people/" + uid)
+					.then(response => response.json())
+					.then(result => {
+						setStore({ personDetail: result.result.properties });
+						console.log("personDetail", store.detail.people);
+					})
+					.catch(error => console.log("error", error));
+			},
+
+			//FUNCION LAMAR PLANETS (Se almacena en  planets)
 			loadPlanets: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-                */
 				const store = getStore();
 				fetch("https://www.swapi.tech/api/planets")
 					.then(response => response.json())
@@ -53,10 +64,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log("error", error));
 			},
 
+			//FUNCION LLAMAR DETALLE PLANETS  (Se almacena en "detailplanets")
+			loadDetailPlanets: uid => {
+				const store = getStore();
+				fetch("https://www.swapi.tech/api/planets/" + uid)
+					.then(response => response.json())
+					.then(result => {
+						setStore({ planetDetail: result.result.properties });
+						console.log("planetDetail", store.planetDetail);
+					})
+					.catch(error => console.log("error", error));
+			},
+
+			//FUNCION LAMAR VEHICLES (Se almacena en vehicles)
 			loadVehicles: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-                */
 				const store = getStore();
 				fetch("https://www.swapi.tech/api/vehicles")
 					.then(response => response.json())
@@ -67,19 +88,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log("error", error));
 			},
 
-			changeColor: (index, color) => {
-				//get the store
+			//FUNCION LLAMAR DETALLE VEHICLES (Se almacena en "detailvehicles")
+			loadDetailVehicles: uid => {
 				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
+				fetch("https://www.swapi.tech/api/vehicles/" + uid)
+					.then(response => response.json())
+					.then(result => {
+						setStore({ vehicleDetail: result.result.properties });
+						console.log("vehicleDetail", store.vehicleDetail);
+					})
+					.catch(error => console.log("error", error));
 			}
 		}
 	};
