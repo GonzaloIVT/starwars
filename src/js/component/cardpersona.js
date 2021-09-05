@@ -10,28 +10,31 @@ export const CardPersona = () => {
 		<>
 			{store.people.map((persona, posicion) => {
 				return (
-					<div className="container row mx-2 justify-content-center" key={posicion}>
+					<div className="container row mx-1 justify-content-center" key={posicion}>
 						{" "}
-						<div className="card mx-2" style={{ width: "18rem" }}>
+						<div className="card mx-1">
+							<span> {persona.uid} </span>
 							<img
 								src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Retrato_del_Maestro_Yoda.jpg/245px-Retrato_del_Maestro_Yoda.jpg"
 								className="card-img-top"
 								alt="..."
 							/>
 							<div className="card-body">
-								<h5 className="card-title">
-									{persona.uid}
-									{persona.name}{" "}
-								</h5>
+								<h5 className="card-title ">{persona.name}</h5>
+								<div className="row">
+									<div className="col col-6">
+										<a href="#" className="btn btn-primary">
+											favoritos
+										</a>
+									</div>
 
-								<a href="#" className="btn btn-primary">
-									favoritos
-								</a>
+									<div className="col col-6">
+										<Link to={"/persona/" + persona.uid}>
+											<button className="btn btn-info"> Ir a perfil</button>
+										</Link>
+									</div>
+								</div>
 							</div>
-
-							<Link to={"/persona/" + persona.uid}>
-								<button className="btn btn-info"> Ir a perfil</button>
-							</Link>
 						</div>
 					</div>
 				);

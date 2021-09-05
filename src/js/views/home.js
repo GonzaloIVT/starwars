@@ -7,9 +7,9 @@ import { Context } from "../store/appContext";
 export const Home = () => (
 	<>
 		<div className="container-fluid text-center mt-5">
-			<h1>Personas</h1>
+			<h1>Personajes</h1>
 			<div className="horizontal">
-				<div className="row flex-nowrap col-2 mx-5">
+				<div className="row flex-nowrap col-3 mx-3">
 					<CardPersona />
 				</div>
 			</div>
