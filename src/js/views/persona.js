@@ -33,20 +33,3 @@ export const Persona = props => {
 Persona.propTypes = {
 	match: PropTypes.object
 };
-
-/*<div className="row">
-				<Cardpersona />
-				<Cardpersona />
-				<Cardpersona />
-			</div>
-			
-			<h1>
-				Estamos en detalle de
-				{store.people[params.idpersona - 1].name}
-			</h1>
-			
-
-
-
-			
-			*/
