@@ -13,25 +13,26 @@ export const CardPersona = () => {
 					<div className="container row mx-1 justify-content-center" key={posicion}>
 						{" "}
 						<div className="card mx-1">
-							<span> {persona.uid} </span>
+							<div className="row col-1">
+								<span> {persona.uid} </span>
+							</div>
 							<img
 								src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Retrato_del_Maestro_Yoda.jpg/245px-Retrato_del_Maestro_Yoda.jpg"
 								className="card-img-top"
 								alt="..."
 							/>
 							<div className="card-body">
-								<h5 className="card-title ">{persona.name}</h5>
+								<h5 className="card-title">{persona.name}</h5>
 								<div className="row">
 									<div className="col col-6">
-										<a href="#" className="btn btn-primary">
-											favoritos
-										</a>
-									</div>
-
-									<div className="col col-6">
 										<Link to={"/persona/" + persona.uid}>
-											<button className="btn btn-info"> Ir a perfil</button>
+											<button className="btn btn-secondary"> Ir a perfil</button>
 										</Link>
+									</div>
+									<div className="col col-6">
+										<a href="#" className="btn btn-warning">
+											<i className="fab fa-gratipay" />
+										</a>
 									</div>
 								</div>
 							</div>
