@@ -19,8 +19,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planets: [],
 			detailpeople: [],
 			detailplanets: [],
-			detailvehicles: []
-			/*favourites: []*/
+			detailvehicles: [],
+			favourites: []
 		},
 
 		actions: {
@@ -99,13 +99,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log("detailvehicles", store.detailvehicles);
 					})
 					.catch(error => console.log("error", error));
-			}
+			},
 
-			/*	loadFavourites: name => {
+			loadFavourites: name => {
 				const store = getStore();
 				setStore({ favourites: [...store.favourites, name] });
 				console.log(store.favourites);
-			}*/
+			}
 		}
 	};
 };

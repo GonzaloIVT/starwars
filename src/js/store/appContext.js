@@ -28,7 +28,7 @@ const injectContext = PassedComponent => {
 			state.actions.loadDetailPeople();
 			state.actions.loadDetailPlanets();
 			state.actions.loadDetailVehicles();
-			/*state.actions.loadFavourites();*/
+			state.actions.loadFavourites();
 
 			/**
 			 * EDIT THIS!

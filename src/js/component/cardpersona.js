@@ -30,9 +30,13 @@ export const CardPersona = () => {
 										</Link>
 									</div>
 									<div className="col col-6">
-										<a href="#" className="btn btn-warning">
+										<button
+											onClick={() => {
+												actions.loadFavourites(persona.name);
+												console.log(store.favourites);
+											}}>
 											<i className="fab fa-gratipay" />
-										</a>
+										</button>
 									</div>
 								</div>
 							</div>
