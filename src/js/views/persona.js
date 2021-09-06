@@ -14,15 +14,19 @@ export const Persona = props => {
 
 	return (
 		<>
-			<h1>Estamos en detalle de {store.detailpeople.name}</h1>
-			<span>altura: {store.detailpeople.height}</span>
-			<span>peso: {store.detailpeople.mass}</span>
-			<span>color del pelo: {store.detailpeople.hair_color}</span>
-			<span>color de piel: {store.detailpeople.skin_color}</span>
-			<span>color de ojos: {store.detailpeople.eye_color}</span>
-			<span>año de nacimiento: {store.detailpeople.birth_year}</span>
-			<span>genero: {store.detailpeople.gender}</span>
-
+			<h1>PERSONAJE: {store.detailpeople.name}</h1>
+			<div className="card varios">
+				<div className="card-header">Caracteristicas</div>
+				<ul className="list-group list-group-flush bg-warning">
+					<li className="list-group-item">Altura: {store.detailpeople.height} cm </li>
+					<li className="list-group-item">Peso: {store.detailpeople.mass} kg </li>
+					<li className="list-group-item">color del pelo: {store.detailpeople.hair_color}</li>
+					<li className="list-group-item">color de piel: {store.detailpeople.skin_color}</li>
+					<li className="list-group-item">color de ojos: {store.detailpeople.eye_color}</li>
+					<li className="list-group-item">año de nacimiento: {store.detailpeople.birth_year}</li>
+					<li className="list-group-item">genero: {store.detailpeople.gender}</li>
+				</ul>
+			</div>{" "}
 			<Link to="/">
 				<button>Go back</button>
 			</Link>
