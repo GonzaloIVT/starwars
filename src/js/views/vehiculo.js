@@ -14,17 +14,22 @@ export const Vehiculo = props => {
 
 	return (
 		<>
-			<h1>Estamos en detalle de {store.detailvehicles.name}</h1>
-			<span>modelo: {store.detailvehicles.model}</span>
-			<span>tipo: {store.detailvehicles.vehicle_class}</span>
-			<span>manufactura: {store.detailvehicles.manufacturer}</span>
-			<span>valor: {store.detailvehicles.cost_in_credits}</span>
-			<span>largo: {store.detailvehicles.length}</span>
-			<span>crew: {store.detailvehicles.crew}</span>
-			<span>pasajeros: {store.detailvehicles.passengers}</span>
-			<span>velocidad: {store.detailvehicles.max_atmosphering_speed}</span>
-			<span>capacidad de carga: {store.detailvehicles.cargo_capacity}</span>
-			<span>consumables: {store.detailvehicles.consumables}</span>
+			<h1>Vehiculo: {store.detailvehicles.name}</h1>
+			<div className="card varios">
+				<div className="card-header">Caracteristicas</div>
+				<ul className="list-group list-group-flush bg-warning">
+					<li className="list-group-item">Modelo: {store.detailvehicles.model} m2 </li>
+					<li className="list-group-item">Clase: {store.detailvehicles.vehicle_class} kg </li>
+					<li className="list-group-item">Manufactura: {store.detailvehicles.manufacturer}</li>
+					<li className="list-group-item">Costo: {store.detailvehicles.cost_in_credits}</li>
+					<li className="list-group-item">Largo: {store.detailvehicles.length}</li>
+					<li className="list-group-item">Crew: {store.detailvehicles.crew}</li>
+					<li className="list-group-item">Pasajeros: {store.detailvehicles.passengers}</li>
+					<li className="list-group-item">Velocidad: {store.detailvehicles.max_atmosphering_speed}</li>
+					<li className="list-group-item">Carga: {store.detailvehicles.cargo_capacity}</li>
+					<li className="list-group-item">Combustible: {store.detailvehicles.consumables}</li>
+				</ul>
+			</div>
 
 			<Link to="/">
 				<button>Go back</button>
