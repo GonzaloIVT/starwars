@@ -13,6 +13,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { CardPersona } from "./component/cardpersona";
 import { CardPlaneta } from "./component/cardplaneta";
+import { CardVehiculo } from "./component/cardvehiculo";
 
 //create your first component
 const Layout = () => {
