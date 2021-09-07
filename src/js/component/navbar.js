@@ -13,12 +13,11 @@ export const Navbar = () => {
 			</div>
 
 			<div className="row col-6 justify-content-center">
-				<h1>STAR WARS</h1>
-				<span>Que la fuerza te acompañe</span>
+				<h1 id="titulo">STAR WARS</h1>
 			</div>
 			<div className="row col-2 ml-auto">
 				<Link to="/demo">
-					<button className="btn btn-primary">Favoritos</button>
+					<button className="btn btn-warning">Favoritos</button>
 				</Link>
 			</div>
 		</nav>

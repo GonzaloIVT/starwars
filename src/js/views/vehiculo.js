@@ -33,7 +33,7 @@ export const Vehiculo = props => {
 				</div>
 
 				<Link to="/">
-					<button id="1">Go back</button>
+					<button>Go back</button>
 				</Link>
 			</div>
 		</>
