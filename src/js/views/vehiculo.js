@@ -16,7 +16,7 @@ export const Vehiculo = props => {
 		<>
 			<div className="container-fluid text-center mt-5">
 				<h1>Vehiculo: {store.detailvehicles.name}</h1>
-				<div className="card varios">
+				<div className="card varios text-dark bg-warning mb-3 ">
 					<div className="card-header">Caracteristicas</div>
 					<ul className="list-group list-group-flush bg-warning">
 						<li className="list-group-item">Modelo: {store.detailvehicles.model} m2 </li>
@@ -33,7 +33,7 @@ export const Vehiculo = props => {
 				</div>
 
 				<Link to="/">
-					<button>Go back</button>
+					<button id="1">Go back</button>
 				</Link>
 			</div>
 		</>

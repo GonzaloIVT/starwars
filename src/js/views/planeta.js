@@ -16,7 +16,7 @@ export const Planeta = props => {
 		<>
 			<div className="container-fluid text-center mt-5">
 				<h1>Planeta: {store.detailplanets.name}</h1>
-				<div className="card varios">
+				<div className="card varios text-dark bg-warning mb-3">
 					<div className="card-header">Caracteristicas</div>
 					<ul className="list-group list-group-flush bg-warning">
 						<li className="list-group-item">Diametro: {store.detailplanets.diameter} m2 </li>

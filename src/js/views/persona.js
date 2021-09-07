@@ -16,7 +16,7 @@ export const Persona = props => {
 		<>
 			<div className="container-fluid text-center mt-5">
 				<h1>PERSONAJE: {store.detailpeople.name}</h1>
-				<div className="card varios">
+				<div className="card varios text-dark bg-warning mb-3">
 					<div className="card-header">Caracteristicas</div>
 					<ul className="list-group list-group-flush bg-warning">
 						<li className="list-group-item">Altura: {store.detailpeople.height} cm </li>
