@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CardFav } from "./listafavoritos";
 
 export const Navbar = () => {
 	return (
@@ -16,9 +17,7 @@ export const Navbar = () => {
 				<h1 id="titulo">STAR WARS</h1>
 			</div>
 			<div className="row col-2 ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-warning">Favoritos</button>
-				</Link>
+				<CardFav />
 			</div>
 		</nav>
 	);
