@@ -16,6 +16,15 @@ export const Navbar = () => {
 			<div className="row col-6 justify-content-center">
 				<h1 id="titulo">STAR WARS</h1>
 			</div>
+
+			<div className="row col-2 ml-auto">
+				<form className="d-flex">
+					<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+					<button className="btn btn-outline-success" type="submit">
+						Search
+					</button>
+				</form>
+			</div>
 			<div className="row col-2 ml-auto">
 				<CardFav />
 			</div>

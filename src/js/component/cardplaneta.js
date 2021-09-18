@@ -29,10 +29,15 @@ export const CardPlaneta = () => {
 											<button className="btn btn-secondary"> Saber mas</button>
 										</Link>
 									</div>
+
 									<div className="col col-6">
-										<a href="#" className="btn btn-warning">
+										<button
+											onClick={() => {
+												actions.loadFavourites(planeta.name);
+												console.log(store.favourites);
+											}}>
 											<i className="fab fa-gratipay" />
-										</a>
+										</button>
 									</div>
 								</div>
 							</div>
