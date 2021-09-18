@@ -17,7 +17,7 @@ export const CardPlaneta = () => {
 								<span> {planeta.uid} </span>
 							</div>
 							<img
-								src="https://www.smashmexico.com.mx/wp-content/uploads/sites/4/2017/04/24145601/trend_info_planetas.jpg"
+								src="https://upload.wikimedia.org/wikipedia/commons/2/23/DesertPlanet.jpg"
 								className="card-img-top"
 								alt="..."
 							/>

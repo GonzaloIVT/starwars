@@ -13,7 +13,17 @@ export const CardFav = () => {
 				<DropdownToggle caret>Favoritos</DropdownToggle>
 				<DropdownMenu>
 					{store.favourites.map((favorito, position) => {
-						return <DropdownItem key={position}>{favorito}</DropdownItem>;
+						return (
+							<DropdownItem key={position}>
+								{favorito}
+								<i
+									className="far fa-trash-alt"
+									onClick={() => {
+										actions.deleteFavourite(favorito);
+									}}
+								/>
+							</DropdownItem>
+						);
 					})}
 				</DropdownMenu>
 			</Dropdown>
