@@ -1,18 +1,22 @@
 import React, { useContext, useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 
 export const CardFav = () => {
+	const [dropdownOpen, setDropdownOpen] = useState(false);
+	const toggle = () => setDropdownOpen(prevState => !prevState);
 	const { store, actions } = useContext(Context);
+
 	return (
 		<>
-			{store.favourites.map((favorito, position) => {
-				return (
-					<div key={position}>
-						<span>{favorito} </span>{" "}
-					</div>
-				);
-			})}
+			<Dropdown isOpen={dropdownOpen} toggle={toggle}>
+				<DropdownToggle caret>Favoritos</DropdownToggle>
+				<DropdownMenu>
+					{store.favourites.map((favorito, position) => {
+						return <DropdownItem key={position}>{favorito}</DropdownItem>;
+					})}
+				</DropdownMenu>
+			</Dropdown>
 		</>
 	);
 };

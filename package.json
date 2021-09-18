@@ -80,12 +80,13 @@
 		"@fortawesome/fontawesome-svg-core": "^1.2.36",
 		"@fortawesome/free-solid-svg-icons": "^5.15.4",
 		"@fortawesome/react-fontawesome": "^0.1.15",
-		"bootstrap": "^5.1.0",
+		"bootstrap": "^5.1.1",
 		"prop-types": "^15.6.1",
-		"react": "^16.8.4",
+		"react": "^16.14.0",
 		"react-bootstrap": "^2.0.0-beta.5",
-		"react-dom": "^16.8.4",
+		"react-dom": "^16.14.0",
 		"react-polyfills": "0.0.1",
-		"react-router-dom": "^5.2.0"
+		"react-router-dom": "^5.2.0",
+		"reactstrap": "^8.10.0"
 	}
 }
