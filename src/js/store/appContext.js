@@ -29,6 +29,7 @@ const injectContext = PassedComponent => {
 			state.actions.loadDetailPlanets();
 			state.actions.loadDetailVehicles();
 			state.actions.loadFavourites();
+			state.actions.deleteFavourite();
 
 			/**
 			 * EDIT THIS!

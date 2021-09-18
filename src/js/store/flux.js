@@ -105,6 +105,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				setStore({ favourites: [...store.favourites, name] });
 				console.log(store.favourites);
+			},
+
+			deleteFavourite: posicion => {
+				const store = getStore();
+				console.log(posicion);
+				const ListFavourite = store.favourites.filter(key => key !== posicion);
+				setStore({ favourites: ListFavourite });
 			}
 		}
 	};
